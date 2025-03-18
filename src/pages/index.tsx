@@ -21,8 +21,8 @@ import { LoginRegisterData } from "~/utils/types";
 export default function Home() {
   const [formMode, setFormMode] = useState("signup");
   const [formData, setFormData] = useState<LoginRegisterData>({
-    name: "",
-    username: "",
+    name: formMode === "signup" ? "" : undefined,
+    username: formMode === "signup" ? "" : undefined,
     email: "",
     password: "",
   });
